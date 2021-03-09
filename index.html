@@ -1,64 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Project 1 Proposal</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine"/>
-  </head>
-  <body>
-    <h1>Project-1 Proposal</h1>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles/style.css" />
+        <meta charset="UTF-8" />
+        <meta name="description" content="Home Page" />
+        <meta name="author" content="Kerim Tuncay Tacir" />
+        <title>My Obssession</title>
+      </head>
+    
+        <body>
+            <div>   <!--HEADER-->
+                <div class="header">
+                  <div class="header-right">   
+                  <img src="images/cnn.png" alt="cnn" width="50" height="50">
+                  <a href="https://www.cnn.com/us">Home</a>
+                  <a href="http://127.0.0.1:5500/schedcule.html">Schedcule</a>
+                  <a href="https://www.cnn.com/politics">Pricing</a>
+                  <a href="https://www.cnn.com/business">Contact</a>
+                  <a href="https://www.cnn.com/opinion">Photos</a>
+                  <a href="https://www.cnn.com/health">Famous Locations</a>
+                </div>
+            </div>
+<div>
+              <div class="w3-content w3-display-container">
+                <img class="mySlides" src="images/golfrr.jpg" style="width:100%">
+                <img class="mySlides" src="img_lights.jpg" style="width:100%">
+                <img class="mySlides" src="img_mountains.jpg" style="width:100%">
+                <img class="mySlides" src="img_forest.jpg" style="width:100%">
+              
+                <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+              </div>
+            </div>
 
-    <h3>What is your website about?</h3>
-    <p>
-      My website will be aiming to provide information about sailing boat
-      chartering in Turkey. It will aim on customers to view the availability
-      dates without contacting a representative, see the prices, information of our company and our boat, and
-      policies.
-    </p>
+<script>
+                  var slideIndex = 1;
+showDivs(slideIndex);
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
 
-    <h3>What is the objective of your website?</h3>
-
-    <p>
-      The main objective will be to inform customers for our policies, pricing
-      information, and availability throughout seasons. This website is vital
-      because our customers would like to have a site where they would like to
-      read our policies and view our contact information alongside with our
-      pricing criteria.
-    </p>
-
-    <h3>Who is your target audience set?</h3>
-
-    <p>
-      My target audience is everyone between 30–75-year-old people who are
-      looking to have a safe vacation with their families, away from crowded
-      areas and covid-19.
-    </p>
-
-    <h3>What content do you plan to include in each page of your website?</h3>
-    <p>
-      Other than the homepage, I was planning on: Pricing, Contact,
-      Availability, Policies, Famous Locations for sailing, a page with
-      Instagram API where it draws live feed.
-    </p>
-    <h4>Kerim Tuncay Tacir TJ</h4>
-  </body>
-
-  <style>
-    body {
-      background-color: rgb(204, 204, 171);
-      padding-left: 300px;
-      padding-right: 300px;
-      padding-top: 100px;
-    }
-    h3 {
-      text-align: left;
-    }
-    h1 {
-      text-align: center;
-      font: arial;
-    }
-    h4 {
-      text-align: right;
-      font-family: tangerine;
-    }
-  </style>
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>   
+        </body>
 </html>
