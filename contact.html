@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Contact" />
+        <link rel="stylesheet" type="text/css" href="styles/style.css" />
+        <meta name="author" content="Kerim Tuncay Tacir" />
+        <title>Customer Feedback</title>
+      </head>
+  </head>
+  <body>
+    <div>   <!--HEADER-->
+        <div class="header">
+          <div class="header-right">   
+          <img src="images/cnn.png" alt="cnn" width="50" height="50">
+          <a href="http://www.my-obsession.com/">Home</a>
+          <a href="http://www.my-obsession.com/schedcule.html">Schedcule</a>
+          <a href="http://www.my-obsession.com/pricing.html">Pricing</a>
+          <a href="http://www.my-obsession.com/contact.html">Contact</a>
+          <a href="http://www.my-obsession.com/photos.html">Photos</a>
+          <a href="http://www.my-obsession.com/locations.html">Famous Locations</a>
+        </div>
+    </div>
+    <h2>Customer Feedback</h2>
+    <div>
+      <fieldset>
+        <legend>Your Information:</legend>
+        <form action="/action_page.php">
+         <p><label for="fname">Name:</label>
+         <input type="text" id="info" name="firstname" placeholder="Enter your name here..."> </p> 
+        <p><label for="Email">Email:</label>
+          <input type="text" id="info" name="email" placeholder="Enter your email here..."> </p>
+          </fieldset>
+    </div>
+    <div>
+
+<fieldset>
+                    <legend>Your Review:</legend>
+              <label for="state-select">When did you visit?</label>   <select name="state" id="state-select">
+                <option value="">Summer Season</option>
+                <option value="">Winter Season</option>
+                <option value="">Fall Season</option>
+                <option value="">Spring Season</option>
+              </select>   
+     <div>
+      <label for="comments">Your Comments:</label>
+      <textarea
+        id="comments"
+        name="comments"
+        rows="5"
+        cols="25"
+      > </textarea>
+     </div>
+
+    <button type="submit">Submit</button> <button type="reset">Reset</button>
+    </fieldset>
+    </form>
+</div>
+  </body>
+<style>
+p {
+    font: arial;
+  }
+  input {
+    font: arial;
+  }
+  h2 {
+    font: arial;
+    padding-left: 200px;
+  }
+  legend {
+    font: arial;
+    border-color: lightgray;
+    font-weight: bold;
+  }
+  fieldset {
+    font: arial;
+    width: 550px;
+  }
+  option {
+    font: arial;
+  }
+  textarea {
+    width: 525px;
+  }
+</style>
+</html>
