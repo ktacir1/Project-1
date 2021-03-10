@@ -43,8 +43,13 @@ body {
     a:hover {
       color: grey;
     }
-    
+
     .mySlides {display:none;}
+
+    .slidepics{
+      padding-right: 200px;
+      padding-left: 200px;
+    }
 
 
 
