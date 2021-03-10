@@ -48,3 +48,15 @@ body {
     .slidess{
       padding-right: 430px;
     }
+
+    .box1{
+      padding-top: 730px;
+      padding-left: 100px;
+      max-width: 500px;
+    }
+    .box2{
+      max-width: 500px;
+      padding-top: 0px;
+      float: right;
+      ;
+    }
