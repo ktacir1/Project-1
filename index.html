@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="styles/style.css" />
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"><!--Slide-->
         <meta charset="UTF-8" />
         <meta name="description" content="Home Page" />
         <meta name="author" content="Kerim Tuncay Tacir" />
@@ -21,6 +22,30 @@
                   <a href="http://www.my-obsession.com/locations.html">Famous Locations</a>
                 </div>
             </div>
-
+<!--I do not own the slide show script, css and HTML. All of the credit goes to https://www.w3schools.com/-->
+<div class="slidess">
+            <div class="w3-content w3-section" style="max-width:500px">
+              <img class="mySlides" src="images/1.JPG" style="width:175%">
+              <img class="mySlides" src="images/2.JPG" style="width:175%">
+              <img class="mySlides" src="images/3.JPG" style="width:175%">
+            </div>
+          </div>
         </body>
+        <script>
+          var myIndex = 0;
+          carousel();
+          
+          function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";  
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}    
+            x[myIndex-1].style.display = "block";  
+            setTimeout(carousel, 3500);
+          }
+          </script>
+
 </html>

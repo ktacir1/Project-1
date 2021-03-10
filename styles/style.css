@@ -43,4 +43,8 @@ body {
     a:hover {
       color: grey;
     }
-    
+    .mySlides {display:none;}
+
+    .slidess{
+      padding-right: 430px;
+    }
