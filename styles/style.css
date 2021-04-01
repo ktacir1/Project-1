@@ -39,7 +39,6 @@ body {
       transition: background-color .5s;
     }
   
-    
     a:hover {
       color: grey;
     }
@@ -51,12 +50,10 @@ body {
 
     .box1{
       padding-top: 730px;
-      padding-left: 100px;
-      max-width: 500px;
+      padding-left: 65px;
+      text-align: center;
     }
     .box2{
-      max-width: 500px;
-      padding-top: 0px;
-      float: right;
-      ;
+      padding-left: 65px;
+      text-align: center;
     }
