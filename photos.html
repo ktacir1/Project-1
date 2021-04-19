@@ -10,7 +10,7 @@
       </head>
     
         <body>
-            <div>   <!--HEADER-->
+            <div> 
                 <div class="header">
                   <div class="header-right">   
                     <img src="images/logo.png" alt="logo" title="logo" width="200" height="50">
@@ -24,43 +24,112 @@
                   <a href="http://www.my-obsession.com/credits.html">Credits</a>
                 </div>
             </div>
-            <div class="slidess">
-              <div class="w3-content w3-section" style="max-width:500px">
-                <img class="mySlides" src="images/1.JPG" alt=image1 title=drone1 style="width:175%">
-                <img class="mySlides" src="images/2.JPG" alt=image2 title=drone2 style="width:175%">
-                <img class="mySlides" src="images/3.JPG" alt=image3 title=drone3 style="width:175%">
-                <img class="mySlides" src="images/5.JPG" alt=image5 title=drone5 style="width:175%">
-                <img class="mySlides" src="images/6.JPG" alt=image6 title=drone6 style="width:175%">
-                <img class="mySlides" src="images/7.JPG" alt=image7 title=drone7 style="width:175%">
-                <img class="mySlides" src="images/8.JPG" alt=image8 title=drone8 style="width:175%">
-                <img class="mySlides" src="images/9.JPG" alt=image9 title=drone9 style="width:175%">
-                <img class="mySlides" src="images/10.JPG" alt=image10 title=drone10 style="width:175%">
+            <div id="text">
+              <h1>Photo Description</h1>
+            </div>
+            <div class="items">
+              <div class="item item-image-left">
+                <img src="./images/9.JPG" name="Portside Guest Cabin" alt="Portside Guest Cabin" />
+              </div>
+              <div class="item">
+                <img src="./images/10.JPG" name="Starboard Guest Cabin" alt="Starboard Guest Cabin" />
+              </div>
+              <div class="item item-image-right">
+                <img src="./images/5.JPG" name="Master Cabin" alt="Master Cabin" />
+              </div>
+              <div class="item item-image-left">
+                <img src="./images/7.JPG" name="Living Room View 1" alt="Living Room View 1" />
+              </div>
+              <div class="item">
+                <img src="./images/8.JPG" name="Living Room View 2" alt="Living Room View 2" />
+              </div>
+              <div class="item item-image-right">
+                <img src="./images/6.JPG" name="Living Room View 3" alt="Living Room View 3" />
               </div>
             </div>
-
+            <div class="footer">
+              <div class="row">
+                <div class="item item-left">
+                  <p>
+                    Sailing in Turkey puts you at the crossroads of history, culture, geography and religion. 
+                    This vast peninsula is surrounded by eight countries and on three sides by the Aegean, Black and Mediterranean seas. 
+                    It’s one of the world’s oldest inhabited regions, a former home to Assyrian, Greek and Phrygian civilizations, among others. 
+                    With more than 500 islands and islets and 4,400 miles of coastline, it is no wonder Turkey is a sailor’s paradise.
+                  </p>
+                  <h3>Links</h3>
+                  <ul>
+                    <li><a href="http://www.my-obsession.com/">Home</a></li> 
+                    <li><a href="http://www.my-obsession.com/schedcule.html">Schedcule</a></li> 
+                    <li><a href="http://www.my-obsession.com/pricing.html">Pricing</a></li> 
+                    <li><a href="http://www.my-obsession.com/contact.html">Contact</a></li>
+                     <li><a href="http://www.my-obsession.com/locations.html">Famous Locations</a></li>
+                  </ul>
+                </div>
+                <div class="item item-right">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3182.043164877333!2d27.285282315256367!3d37.10408997988707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14be6c404c7991b5%3A0xfb623315053922fd!2sYal%C4%B1kavak%20Marina!5e0!3m2!1str!2sus!4v1615399325863!5m2!1str!2sus"
+                    width="100%"
+                    height="230px"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
             <script>
-              var myIndex = 0;
-              carousel();
-              
-              function carousel() {
-                var i;
-                var x = document.getElementsByClassName("mySlides");
-                for (i = 0; i < x.length; i++) {
-                  x[i].style.display = "none";  
-                }
-                myIndex++;
-                if (myIndex > x.length) {myIndex = 1}    
-                x[myIndex-1].style.display = "block";  
-                setTimeout(carousel, 2500);
-              }
+              document.querySelectorAll(".item img").forEach((element) => {
+        element.onmouseover = function () {
+          const name = element.getAttribute("name");
+          document.querySelector("#text h1").innerText = name;
+          element.style.transform = "scale(1.2)";
+        };
+        element.onmouseout = function () {
+          element.style.transform = "scale(1)";
+        };
+      });
+      setInterval(() => {
+        document.querySelectorAll(".item-image-left").forEach((element) => {
+          if (element.offsetLeft < 0)
+            element.style.left = element.offsetLeft + 0.1 + "px";
+          else element.style.left = "auto";
+        });
+        document.querySelectorAll(".item-image-right").forEach((element) => {
+          const right =
+            window.innerWidth - element.getBoundingClientRect().right;
+          console.log(right);
+
+          if (right < 0) element.style.right = right + 0.5 + "px";
+          else element.style.right = "auto";
+        });
+      }, 100);
               </script>
               
         </body>
 
         <style>
-          .slidess{
-            padding-left: 290px;
-            padding-top: 10px;
-   
-  }
+#text h1 {
+        text-align: center;
+      }
+      .items {
+        padding: 10px 20px;
+      }
+      .items .item {
+        display: inline-block;
+        width: 25%;
+        margin-left: 6%;
+        margin-top: 2.3%;
+      }
+      .items .item img {
+        height: 100%;
+        width: 100%;
+      }
+      .item-image-left {
+        left: -400px;
+        position: relative;
+      }
+      .item-image-right {
+        right: -400px;
+        position: relative;
+      }
         </style>

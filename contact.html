@@ -25,49 +25,117 @@
         </div>
     </div>
     <div>
-    <h2>Customer Feedback</h2>
-    <div id="adamsin">
-      <fieldset>
-        <legend>Your Information:</legend>
-        <form action="/action_page.php">
-         <p><label for="fname">Name:</label>
-         <input type="text" id="info" name="firstname" placeholder="Enter your name here..."> </p> 
-        <p><label for="Email">Email:</label>
-          <input type="text" id="info" name="email" placeholder="Enter your email here..."> </p>
-          </fieldset>
-    </div>
-    <div>
-<fieldset>
-                    <legend>Your Review:</legend>
-              <label for="state-select">When did you visit?</label>   <select name="state" id="state-select">
+      <h2>Customer Feedback</h2>
+      <div class="items">
+        <div class="item left-item">
+          <div id="adamsin">
+            <fieldset>
+              <legend>Your Information:</legend>
+              <p>
+                <label for="fname">Name:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="firstname"
+                  placeholder="Enter your name here..."
+                />
+              </p>
+              <p>
+                <label for="Email">Email:</label>
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email here..."
+                />
+              </p>
+            </fieldset>
+            <fieldset>
+              <legend>Your Review:</legend>
+              <label for="state-select">When did you visit?</label>
+              <select name="state" id="state-select">
                 <option value="">Summer Season</option>
                 <option value="">Winter Season</option>
                 <option value="">Fall Season</option>
                 <option value="">Spring Season</option>
-              </select>   
-     <div>
-      <label for="comments">Your Comments:</label>
-      <textarea
-        id="comments"
-        name="comments"
-        rows="5"
-        cols="25"
-      > </textarea>
-     </div>
-
-    <button type="submit">Submit</button> <button type="reset">Reset</button>
-    </fieldset>
-    </form>
+              </select>
+              <div>
+                <label for="comments">Your Comments:</label>
+                <textarea
+                  id="comments"
+                  name="comments"
+                  rows="5"
+                  cols="25"
+                ></textarea>
+              </div>
+              <button type="submit" onclick="checkForm()">Submit</button>
+              <button type="reset">Reset</button>
+            </fieldset>
+          </div>
+  
+        </div>
+        <div class="item right-item">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3182.043164877333!2d27.285282315256367!3d37.10408997988707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14be6c404c7991b5%3A0xfb623315053922fd!2sYal%C4%B1kavak%20Marina!5e0!3m2!1str!2sus!4v1615399325863!5m2!1str!2sus"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+  
+      <div class="contactme">
+        <p style="padding-top: 50px">Contact Information:</p>
+        <p>Landline: + 1(781)375-7814</p>
+        <p>Cell Number: + 90(530)773-1354</p>
+        <p>Email: ktacir1@babson.edu</p>
+        <p style="max-width: 500px">
+          Address: Merkez Mahallesi, Çökertme Cd. No:6, 48990 Bodrum/Muğla,
+          Türkiye
+        </p>
+      </div>
+<div class="footer">
+  <div class="row">
+    <div class="item item-left">
+      <p>
+        Sailing in Turkey puts you at the crossroads of history, culture, geography and religion. 
+        This vast peninsula is surrounded by eight countries and on three sides by the Aegean, Black and Mediterranean seas. 
+        It’s one of the world’s oldest inhabited regions, a former home to Assyrian, Greek and Phrygian civilizations, among others. 
+        With more than 500 islands and islets and 4,400 miles of coastline, it is no wonder Turkey is a sailor’s paradise.
+      </p>
+      <h3>Links</h3>
+      <ul>
+         <li><a href="http://www.my-obsession.com/">Home</a></li> 
+         <li><a href="http://www.my-obsession.com/schedcule.html">Schedcule</a></li> 
+         <li><a href="http://www.my-obsession.com/pricing.html">Pricing</a></li> 
+          <li><a href="http://www.my-obsession.com/photos.html">Photos</a></li>
+          <li><a href="http://www.my-obsession.com/locations.html">Famous Locations</a></li>
+      </ul>
+    </div>
+    <div class="item item-right">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3182.043164877333!2d27.285282315256367!3d37.10408997988707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14be6c404c7991b5%3A0xfb623315053922fd!2sYal%C4%B1kavak%20Marina!5e0!3m2!1str!2sus!4v1615399325863!5m2!1str!2sus"
+        width="100%"
+        height="230px"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </div>
   </div>
 </div>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3182.043164877333!2d27.285282315256367!3d37.10408997988707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14be6c404c7991b5%3A0xfb623315053922fd!2sYal%C4%B1kavak%20Marina!5e0!3m2!1str!2sus!4v1615399325863!5m2!1str!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-<div class="contactme">
-<p style="padding-top: 50px;">Contact Information:</p> 
-<p>Landline: </p>
-<p>Cell Number: </p>
-<p>Email: </p>
-<P style="max-width: 500px;">Address: Merkez Mahallesi, Çökertme Cd. No:6, 48990 Bodrum/Muğla, Türkiye</P>
-</div>
+<script>
+  function checkForm() {
+    var name = document.querySelector("#name").value;
+    var email = document.querySelector("#email").value;
+    var comments = document.querySelector("#comments").value;
+    console.log({ name, email });
+    if (name == "" || email == "" || comments == "")
+      alert("Please fill in the form fully.");
+  }
+</script>
 </body>
 <style>
 p {
@@ -78,7 +146,8 @@ p {
   }
   h2 {
     font: arial;
-    padding-left: 200px;
+    padding-left: center;
+    text-align: center;
   }
   legend {
     font: arial;
@@ -87,21 +156,27 @@ p {
   }
   fieldset {
     font: arial;
-    width: 550px;
+    width: 100%;
   }
   option {
     font: arial;
   }
   textarea {
-    width: 525px;
+    width: 100%;
   }
   .contactme {
-    float: left;
     padding-left: 75px;
   }
   iframe {
     text-align: center;
-    margin-left: 200px;
   }
+  .items {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+      }
+      .item {
+        width: 45%;
+        }
 </style>
 </html>
